@@ -1,0 +1,243 @@
+// Image view
+.image-view {
+
+	.frappe-list {
+		padding: var(--padding-xs);
+	}
+
+	.list-header-subject {
+
+		.list-image-header {
+			display: flex;
+		}
+
+		.list-count {
+			font-size: var(--text-md);
+			margin: 0;
+		}
+
+		.list-image-header-item {
+			display: flex;
+			align-items: center;
+			margin-right: var(--margin-lg);
+
+			div {
+				margin-left: var(--margin-xs);
+			}
+		}
+
+	}
+
+	.image-view-container {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		max-width: 100%;
+
+		.image-view-row {
+			display: flex;
+			border-bottom: 1px solid #ebeff2;
+		}
+
+		.image-view-item {
+			position: relative;
+			padding: var(--padding-sm) var(--padding-sm);
+			display: flex;
+			flex-direction: column;
+			height: 250px;
+			border-radius: var(--border-radius);
+
+			// .list-row-checkbox {
+			// 	&:before {
+			// 		display: none;
+			// 	}
+
+			// 	&:checked:before {
+			// 		display: block;
+			// 	}
+			// }
+
+			// .not-liked {
+			// 	display: none;
+			// }
+		}
+
+		.image-view-item:hover {
+			// box-shadow: none;
+			border: none;
+			background-color: var(--highlight-color);
+
+			.list-row-checkbox {
+				&:before {
+					display: block;
+				}
+			}
+
+			.not-liked {
+				display: none;
+			}
+		}
+
+		.image-view-header {
+			position: absolute;
+			top: 12px;
+			left: var(--padding-md);
+			right: var(--padding-md);
+			display: block;
+			margin-bottom: var(--margin-sm);
+			
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		.image-view-info {
+			font-size: $font-size-sm;
+			color: var(--gray-600);
+			margin-bottom: 0;
+		}
+
+		.image-view-body {
+			&:hover .zoom-view {
+				opacity: 0.7;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+
+			&.no-image {
+				@include flex(flex, center, center, null);
+				background-color: var(--control-bg);
+				border-radius: $border-radius;
+			}
+		}
+
+		.image-field {
+			max-height: 175px;
+			position: relative;
+			display: block;
+			text-align: center;
+			margin: 0 auto;
+			overflow: hidden;
+			border-radius: var(--border-radius);
+
+			.image-wrapper {
+				@include flex(flex, null, center, null);
+				width: 100%;
+				height: 100%;
+			}
+
+			img {
+				// max-width: 100%;
+				// max-height: 100%;
+				border-radius: $border-radius;
+				color: transparent;
+				display: block;
+				margin: 0 auto;
+			}
+
+			img[alt]:after {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 1;
+				left: 0;
+				position: absolute;
+				padding: 0;
+				background: var(--gray-50);
+			}
+		}
+
+		.image-title {
+			input {
+				margin-right: 5px;
+			}
+
+			.ellipsis {
+				vertical-align: bottom;
+			}
+
+			display: flex;
+			font-weight: 500;
+			justify-content: flex-start;
+			align-items: center;
+			margin-top: var(--margin-sm);
+		}
+
+		.placeholder-text {
+			font-size: $font-size-5xl;
+			color: var(--gray-500);
+		}
+
+		.zoom-view {
+			width: 18px;
+			height: 18px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			bottom: 3px;
+			right: 3px;
+			opacity: 0;
+			font-size: $font-size-lg;
+			position: absolute;
+			background: var(--gray-300);
+			border-radius: $border-radius;
+
+			.icon {
+				use {
+					stroke: $text-color;
+				}
+			}
+
+			// show zoom button on mobile devices
+			// @media (max-width: $screen-xs) {
+			// 	opacity: 0.5
+			// }
+		}
+	}
+
+
+	// .item-selector {
+	// 	border: 1px solid $border-color;
+
+	// 	.image-view-row {
+	// 		width: 100%;
+	// 	}
+	// 	.image-field {
+	// 		height: 120px;
+	// 	}
+
+	// 	.placeholder-text {
+	// 		font-size: 48px;
+	// 	}
+	// }
+
+	// .image-view-container.three-column {
+	// 	.image-view-item {
+	// 		flex: 0 0 100%/3;
+	// 		max-width: 100%/3;
+	// 	}
+
+	// 	.image-view-item:nth-child(3n) {
+	// 		border-right: none;
+	// 	}
+	// 	.image-view-item:nth-last-child(-n + 3):nth-child(3n + 1),
+	// 	.image-view-item:nth-last-child(-n + 3):nth-child(3n + 1) ~ .image-view-item {
+	// 		border-bottom: none;
+	// 	}
+
+	// 	.image-view-item:nth-child(4n) {
+	// 		// border-right: 1px solid $light-border-color;
+	// 	}
+	// 	.image-view-item:nth-last-child(-n + 4):nth-child(4n + 1),
+	// 	.image-view-item:nth-last-child(-n + 4):nth-child(4n + 1) ~ .image-view-item {
+	// 		border-bottom: 1px solid $light-border-color;
+	// 	}
+	// }
+}

@@ -1,0 +1,51 @@
+@import "../calendar-base";
+
+.fc {
+	.fc-toolbar.fc-header-toolbar {
+		margin-top: 1.5em;
+		padding: 0 1.5em;
+		h2 {
+			font-size: 1.2em !important;
+		}
+	}
+
+	.fc-event {
+		border: 5px solid;
+		border-right: none;
+		border-top: none;
+		border-bottom: none;
+		border-color: transparent;
+
+		&.green {
+			border-color: var(--dark-green-500) !important;
+		}
+
+		&.blue {
+			border-color: var(--blue-600) !important;
+		}
+
+		&.yellow {
+			border-color: var(--yellow-500) !important;
+		}
+
+		&.grey {
+			border-color: var(--gray-600) !important;
+		}
+
+		&.darkgray {
+			border-color: var(--dark-gray-600) !important;
+		}
+
+		&.red {
+			border-color: var(--red-500) !important;
+		}
+
+		&.orange {
+			border-color: var(--orange-500)!important;
+		}
+	}
+
+	.fc-view-harness {
+		min-height: 100vh;
+	}
+}

@@ -1,0 +1,150 @@
+.title-area {
+	display: inline-flex;
+	align-items: center;
+	.title-text {
+		margin-bottom: 0px;
+		margin-right: var(--margin-sm);
+	}
+}
+
+.page-container {
+	background-color: var(--bg-color);
+}
+
+.page-actions {
+	align-items: center;
+	.btn {
+		height: 28px;
+		margin-left: var(--margin-sm, 8px);
+		border-radius: var(--border-radius);
+	}
+	.btn:not(.icon-btn) {
+		padding: 4px 10px;
+	}
+	.btn-primary, .btn-secondary {
+		min-width: 70px;
+	}
+	.custom-btn-group {
+		display: inline-flex;
+	}
+}
+
+$page-bottom-margin: 60px;
+.layout-main-section-wrapper {
+	margin-bottom: $page-bottom-margin;
+}
+
+.layout-main-section.frappe-card {
+	overflow: hidden;
+	@include card($padding: 0px);
+}
+
+.page-head {
+	z-index: 5;
+	position: sticky;
+	top: var(--navbar-height);
+	background: var(--bg-color);
+	margin-bottom: 5px;
+	.page-head-content {
+		height: $page-head-height;
+	}
+	&.drop-shadow {
+		box-shadow: var(--shadow-sm);
+		background-color: var(--fg-color) !important;
+	}
+}
+
+.page-form {
+	margin: 0;
+	padding: var(--padding-sm);
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--card-bg);
+	border-bottom: 1px solid var(--border-color);
+	box-shadow: $card-box-shadow;
+
+	.form-group {
+		padding: 0px 5px;
+		margin: 5px 0px;
+	}
+	.checkbox {
+		margin-top: 4px;
+		margin-bottom: 4px;
+
+		.help-box {
+			display: none;
+		}
+	}
+}
+
+.message-page {
+	min-height: 50vh;
+	.message-page-icon {
+		font-size: 10rem;
+		margin-bottom: 1rem;
+	}
+	.message-page-image {
+		margin-bottom: 1rem;
+	}
+	.btn-home {
+		margin-top: 1rem;
+	}
+}
+
+.form-inner-toolbar {
+	.inner-group-button {
+		display: inline-flex;
+		.icon {
+			margin-right: -var(--margin-xs);
+		}
+	}
+	button {
+		margin-left: var(--margin-sm);
+	}
+}
+
+.menu-btn-group, .custom-btn-group {
+	.dropdown-menu {
+		width: max-content;
+	}
+
+	.menu-item-label {
+		margin-right: var(--margin-md);
+	}
+
+	.menu-item-icon {
+		margin-right: var(--margin-sm);
+	}
+}
+
+.layout-main-section {
+	.frappe-list, .report-wrapper {
+		padding: 0 var(--padding-xs);
+	}
+
+	//.result,
+	.no-result, .freeze {
+		min-height: #{"calc(100vh - 284px)"};
+	}
+
+	.msg-box {
+		margin-bottom: 4em;
+		font-size: var(--text-sm);
+
+		// To compensate for perceived centering
+		.null-state {
+			height: 85px;
+			width: auto;
+			margin-bottom: var(--margin-md);
+			img {
+				fill: var(--fg-color);
+			}
+		}
+
+		.meta-description {
+			width: 45%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}

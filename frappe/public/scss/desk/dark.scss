@@ -1,0 +1,90 @@
+[data-theme="dark"] {
+	// --gray-50: #{$gray-50};
+	// --gray-100: #F7FAFC;
+	// --gray-200: #EDF2F7;
+	// --gray-300: #E2E8F0;
+	// --gray-400: #CBD5E0;
+	// --gray-500: #A0AEC0;
+	// --gray-600: #718096;
+	// --gray-700: #4A5568;
+	// --gray-800: #2D3748;
+	// --gray-900: #1A202C;
+
+	// Type Colors
+	--text-muted: var(--gray-300);
+	--text-light: var(--gray-400);
+	--text-color: var(--gray-50);
+	--heading-color: var(--gray-50);
+	--text-secondary-color: var(--blue-50);
+
+	// SVG Colors
+	--icon-fill: transparent;
+	--icon-stroke: var(--gray-500);
+
+	// Layout Colors
+	--bg-color: var(--gray-900);
+	--fg-color: var(--gray-800);
+	--fg-hover-color: var(--gray-700);
+	--card-bg: var(--gray-800);
+	--control-bg: var(--gray-700);
+	--awesomebar-focus-bg: var(--control-bg);
+	--modal-bg: var(--gray-700);
+	--toast-bg: var(--modal-bg);
+	--popover-bg: var(--bg-color);
+
+	// Background Text Color Pairs
+	--bg-blue: var(--blue-500);
+	--bg-green: var(--dark-green-500);
+	--bg-yellow: var(--yellow-500);
+	--bg-orange: var(--orange-500);
+	--bg-red: var(--red-500);
+	--bg-gray: var(--gray-600);
+	--bg-darkgray: var(--dark-gray-600);
+
+	--text-on-blue: var(--blue-50);
+	--text-on-green: var(--dark-green-50);
+	--text-on-yellow: var(--yellow-50);
+	--text-on-orange: var(--orange-100);
+	--text-on-red: var(--red-50);
+	--text-on-gray: var(--gray-100);
+	--text-on-darkgray: var(--dark-gray-100);
+
+	--sidebar-select-color: var(--gray-800);
+
+	--shadow-inset: var(--fg-color);
+	--border-color: var(--gray-700);
+	--dark-border-color: var(--gray-600);
+	--highlight-color: var(--gray-700);
+	--yellow-highlight-color: var(--yellow-700);
+
+	.frappe-card {
+		.btn-default {
+			background-color: var(--bg-color);
+		}
+	}
+
+	.modal, .form-in-grid {
+		--control-bg: var(--gray-800);
+		--border-color: var(--gray-600);
+	}
+
+	.print-format {
+		--text-color: var(--gray-900);
+		--border-color: var(--gray-100);
+	}
+
+	.ql-editor.read-mode {
+		span, p, u, strong {
+			background-color: inherit !important;
+			color: inherit !important;
+		}
+	}
+/* 	--appreciation-color: var(--dark-green-100);
+	--appreciation-bg: var(--dark-green-600);
+	--criticism-color: var(--red-100);
+	--criticism-bg: var(--red-600); */
+
+	.form-control:focus {
+		color: white;
+	}
+}
